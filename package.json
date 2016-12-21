@@ -17,6 +17,8 @@
     "css-loader": "^0.26.1",
     "elemental": "^0.6.1",
     "express": "^4.14.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "node-sass": "^4.1.1",
     "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.4.1",
