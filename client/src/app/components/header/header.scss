@@ -1,0 +1,17 @@
+$amethyst: #9b59b6;
+#navbar {
+    background: $amethyst;
+    border-radius: 0;
+    
+    a {
+        color: #eee;
+    }
+
+    li{
+        a{
+            &:hover {
+            background: lighten($amethyst, 10);
+            }
+        } 
+    }
+}
