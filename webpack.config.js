@@ -33,9 +33,5 @@ module.exports = {
   },
   resolve: {
       extensions: ['', '.js', '.jsx']
-  },
-  sassLoader: {
-    data: '@import "theme/_config.scss";',
-    includePaths: [path.resolve(__dirname, './client/src/app')]
   }
 };
