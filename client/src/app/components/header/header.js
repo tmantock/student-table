@@ -7,7 +7,7 @@ require('./header.scss');
 class Header extends Component {
     render(){
         return (
-            <AppBar title='React Toolbox' leftIcon='menu' rightIcon={<GithubIcon />}>
+            <AppBar title='React Toolbox' leftIcon='menu'>
                 <Navigation type='horizontal'>
                     <Link href='http://' label='Inbox' icon='inbox' />
                     <Link href='http://' active label='Profile' icon='person' />
