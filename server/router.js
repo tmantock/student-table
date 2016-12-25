@@ -1,4 +1,5 @@
 const Authentication = require('./controllers/authentication');
+const StudentRequest = require('./controllers/studentRequest');
 const passportService = require('./services/passport');
 const passport = require('passport');
 
@@ -12,6 +13,9 @@ module.exports = function (app) {
       message: "You've reached the secret server route"
      });
   });
+
+  app.post('/students', StudentRequest.getStudents);
+  app.post('/add-student', StudentRequest.addStudent);
 
   app.post('/signup', Authentication.signup);
   app.post('/signin', requireSignin, Authentication.signin);
