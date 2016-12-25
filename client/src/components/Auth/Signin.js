@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
 import { Form, FormField, FormInput, Button } from 'elemental';
+require("./Signin.scss");
 
 class Signin extends Component {
     handleFormSubmit({email, password}){
@@ -21,16 +22,18 @@ class Signin extends Component {
         const { handleSubmit, fields: { email, password }} = this.props;
 
         return (
-            <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-                <FormField label="Email" htmlFor="input-email">
-                    <FormInput {...email} type="email" placeholder="Email" name="input-email" />
-                </FormField>
-                <FormField label="Password" htmlFor="input-password">
-                    <FormInput {...password} type = "password" placeholder="Password" name="input-password" />
-                </FormField>
-                {this.renderAlert()}
-                <Button submit>Sign-In</Button>
-            </Form>
+            <div className="auth-form">
+                <Form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                    <FormField label="Email" htmlFor="input-email">
+                        <FormInput {...email} type="email" placeholder="Email" name="input-email" />
+                    </FormField>
+                    <FormField label="Password" htmlFor="input-password">
+                        <FormInput {...password} type = "password" placeholder="Password" name="input-password" />
+                    </FormField>
+                    {this.renderAlert()}
+                    <Button type="hollow-primary" submit>Sign-In</Button>
+                </Form>
+            </div>
         );
     }
 }

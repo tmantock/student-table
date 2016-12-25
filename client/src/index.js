@@ -7,6 +7,7 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/App';
 import Signin from './components/Auth/Signin';
+import Signup from './components/Auth/Signup';
 import reducers from './reducers';
 
 require('./theme/_config.less');
@@ -29,6 +30,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <Route path="/signin" component={Signin} />
+        <Route path="/signup" component={Signup} />
       </Route>
     </Router>
   </Provider>
