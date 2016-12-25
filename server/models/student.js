@@ -16,7 +16,7 @@ studentSchema.methods.calculateGrade = function (course) {
                 total += assignment.possibleAmount;
             }
         });
-        return total / length;
+        return score / total;
     }
     return 0;
 }
